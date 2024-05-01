@@ -5,10 +5,10 @@ import './App.css'
 import * as Schema from "@effect/schema/Schema"
 import * as Effect from "effect/Effect"
 
-// const s = Schema.String
-// //const a = Schema.decode(s)("hello").pipe(Effect.runSync)
-// const a = Schema.decodeSync(s)("hello")
+// //const a = Schema.decode(Schema.String)("hello").pipe(Effect.runSync)
+// const a = Schema.decodeSync(Schema.String)("hello")
 const a = Effect.sync(() => "hello").pipe(Effect.runSync)
+
 function App() {
   const [count, setCount] = useState(0)
 
